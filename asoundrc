@@ -1,0 +1,36 @@
+pcm.monocard {
+ type plug
+ slave.pcm "plughw:1,0"
+ slave.channels  2
+ slave.rate 16000
+}
+
+ctl.monocard {
+ type hw
+ card 1
+ device 0
+}
+
+pcm.!default {
+  type asym
+  playback.pcm {
+     type hw
+     card 0
+  }
+  capture.pcm {
+     type plug
+     slave.pcm "monocard"
+  }
+}
+
+ctl.!default {
+  type asym
+  playback.pcm {
+     type hw
+     card 0
+  }
+  capture.pcm {
+     type plug
+     slave.pcm "monocard"
+  }
+}
