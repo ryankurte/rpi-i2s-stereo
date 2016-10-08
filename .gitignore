@@ -1,0 +1,8 @@
+*.cmd
+*.ko
+*.o
+*.symvers
+*.order
+*.tmp_versions
+*.mod.c
+rpi-source/
