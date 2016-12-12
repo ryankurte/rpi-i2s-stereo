@@ -3,9 +3,11 @@
 # Make sure your system is up to date and install dependencies before running.
 # sudo apt-get update
 # sudo apt-get dist-upgrade
-# sudo apt-get install -yq bc libncurses5-dev
 
 #set -e
+
+echo "Install dependencies"
+sudo apt-get install -yq bc libncurses5-dev
 
 echo "Enable kernel I2C/I2S"
 sudo sed -i "s/#dtparam=i2s=on/dtparam=i2s=on/g" /boot/config.txt
