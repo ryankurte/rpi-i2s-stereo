@@ -21,7 +21,7 @@ if ! grep -Fxq "snd_soc_bcm2708_i2s" /etc/modules; then
   echo "snd_soc_bcm2708_i2s" | sudo tee -a /etc/modules
 fi
 
-if ! grep -Fxq "snd_soc_bcm2708" /etc/modules; then
+if ! grep -Fxq "nbcm2708_dmaengine" /etc/modules; then
   echo "nbcm2708_dmaengine" | sudo tee -a /etc/modules
 fi
 
